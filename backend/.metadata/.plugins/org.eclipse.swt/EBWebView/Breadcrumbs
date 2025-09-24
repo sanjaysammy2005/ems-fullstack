@@ -43,3 +43,76 @@
 2:16:21 Memory Pressure: Moderate
 2:16:31 Memory Pressure: Moderate
 2:16:41 Memory Pressure: Moderate
+2:18:16 Memory Pressure: Moderate
+2:18:26 Memory Pressure: Moderate
+2:18:46 Memory Pressure: Moderate
+2:18:56 Memory Pressure: Moderate
+2:19:06 Memory Pressure: Moderate
+2:19:16 Memory Pressure: Moderate
+2:19:26 Memory Pressure: Moderate
+2:19:36 Memory Pressure: Moderate
+2:19:46 Memory Pressure: Moderate
+2:19:56 Memory Pressure: Moderate
+2:20:06 Memory Pressure: Moderate
+2:20:16 Memory Pressure: Moderate
+2:20:27 Memory Pressure: Moderate
+2:20:37 Memory Pressure: Moderate
+2:20:47 Memory Pressure: Moderate
+2:20:57 Memory Pressure: Moderate
+2:21:07 Memory Pressure: Moderate
+2:21:17 Memory Pressure: Moderate
+2:21:27 Memory Pressure: Moderate
+2:21:37 Memory Pressure: Moderate
+2:21:47 Memory Pressure: Moderate
+2:21:57 Memory Pressure: Moderate
+2:27:15 Microsoft.NewBrowser_Popup
+2:27:15 Microsoft.BrowserList.AddBrowser
+2:27:15 Browser7 Insert active Tab7 at 0
+2:27:15 Tab7 StartNav16 #auto_toplevel
+2:27:15 Tab7 StartNav17 #typed
+2:27:15 Tab7 FinishNav16
+2:27:15 Tab7 PageLoad
+2:27:15 Tab7 FinishNav17
+2:27:15 Tab7 PageLoad
+2:27:15 Tab7 StartNav18 #typed
+2:27:15 Tab7 FinishNav18
+2:27:15 Tab7 PageLoad
+2:27:17 Memory Pressure: Moderate
+2:27:18 Tab7 StartNav19 #typed
+2:27:18 Tab7 FinishNav19
+2:27:18 Tab7 PageLoad
+2:27:19 Tab7 StartNav20 #typed
+2:27:19 Tab7 FinishNav20
+2:27:19 Tab7 PageLoad
+2:27:20 Tab7 StartNav21 #typed
+2:27:20 Tab7 FinishNav21
+2:27:20 Tab7 PageLoad
+2:27:25 Tab7 StartNav22 #typed
+2:27:25 Tab7 FinishNav22
+2:27:25 Tab7 PageLoad
+2:27:27 Memory Pressure: Moderate
+2:27:27 Tab7 StartNav23 #typed
+2:27:27 Tab7 FinishNav23
+2:27:27 Tab7 PageLoad
+2:27:30 Tab7 StartNav24 #typed
+2:27:30 Tab7 FinishNav24
+2:27:30 Tab7 PageLoad
+2:27:32 Tab7 StartNav25 #typed
+2:27:32 Tab7 FinishNav25
+2:27:32 Tab7 PageLoad
+2:27:35 Tab7 StartNav26 #typed
+2:27:35 Tab7 FinishNav26
+2:27:35 Tab7 PageLoad
+2:27:37 Memory Pressure: Moderate
+2:27:47 Tab7 StartNav27 #typed
+2:27:47 Tab7 FinishNav27
+2:27:47 Tab7 PageLoad
+2:27:47 Memory Pressure: Moderate
+2:27:52 Tab7 StartNav28 #typed
+2:27:52 Tab7 FinishNav28
+2:27:52 Tab7 PageLoad
+2:27:52 Tab7 StartNav29 #typed
+2:27:52 Tab7 FinishNav29
+2:27:52 Tab7 PageLoad
+2:27:57 Memory Pressure: Moderate
+2:28:07 Memory Pressure: Moderate
