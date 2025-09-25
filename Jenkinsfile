@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     stages {
-
         // ===== FRONTEND BUILD =====
         stage('Build Frontend') {
             steps {
@@ -13,20 +12,20 @@ pipeline {
             }
         }
 
-        // ===== FRONTEND DEPLOY =====
-        stage('Deploy Frontend to Tomcat') {
+        // ===== COPY FRONTEND TO BACKEND =====
+        stage('Integrate Frontend into Backend') {
             steps {
                 bat '''
-                if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\reactemployeeapi" (
-                    rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\reactemployeeapi"
+                if exist backend\\EmployeemanagementSystem\\src\\main\\resources\\static (
+                    rmdir /S /Q backend\\EmployeemanagementSystem\\src\\main\\resources\\static
                 )
-                mkdir "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\reactemployeeapi"
-                xcopy /E /I /Y frontend\\dist\\* "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\reactemployeeapi"
+                mkdir backend\\EmployeemanagementSystem\\src\\main\\resources\\static
+                xcopy /E /I /Y frontend\\dist\\* backend\\EmployeemanagementSystem\\src\\main\\resources\\static
                 '''
             }
         }
 
-        // ===== BACKEND BUILD =====
+        // ===== BACKEND BUILD (WAR includes frontend now) =====
         stage('Build Backend') {
             steps {
                 dir('backend/EmployeemanagementSystem') {
@@ -35,21 +34,20 @@ pipeline {
             }
         }
 
-        // ===== BACKEND DEPLOY =====
-    stage('Deploy Backend to Tomcat') {
-        steps {
-            bat '''
-            if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springbootemployeeapi.war" (
-                del /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springbootemployeeapi.war"
-            )
-            if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springbootemployeeapi" (
-                rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springbootemployeeapi"
-            )
-            copy "backend\\EmployeemanagementSystem\\target\\*.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springbootemployeeapi.war"
-            '''
+        // ===== DEPLOY TO TOMCAT =====
+        stage('Deploy Backend + Frontend') {
+            steps {
+                bat '''
+                if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springbootemployeeapi.war" (
+                    del /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springbootemployeeapi.war"
+                )
+                if exist "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springbootemployeeapi" (
+                    rmdir /S /Q "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springbootemployeeapi"
+                )
+                copy "backend\\EmployeemanagementSystem\\target\\*.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 10.1\\webapps\\springbootemployeeapi.war"
+                '''
+            }
         }
-    }
-
     }
 
     post {
